@@ -1,0 +1,71 @@
+{
+  "name": "@cdmx/n8n-nodes-cron-parser",
+  "version": "0.1.0",
+  "description": "Cron expression parser node for n8n workflows with timezone support and next run time calculation",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "cron",
+    "cron-parser",
+    "scheduler",
+    "timezone"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cdmx-in/n8n-nodes-cron-parser",
+  "author": {
+    "name": "Roney Dsilva",
+    "email": "roney.dsilva@cdmx.in"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdmx-in/n8n-nodes-cron-parser.git"
+  },
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=9.1"
+  },
+  "packageManager": "pnpm@9.1.4",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier --write \"**/*.{ts,json}\"",
+    "format:check": "prettier --check \"**/*.{ts,json}\"",
+    "lint": "eslint nodes --ext .ts",
+    "lint:fix": "eslint nodes --ext .ts --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build",
+    "publish-dry-run": "npm publish --access public --dry-run",
+    "publish-pkg": "npm publish --access public"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 2,
+    "credentials": [],
+    "nodes": [
+      "dist/nodes/CronParser/CronParser.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "gulp": "^5.0.0",
+    "jest": "^29.7.0",
+    "n8n-workflow": "^1.48.0",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.4",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "cron-parser": "^4.9.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "^1.0.0"
+  }
+}
