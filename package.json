@@ -1,6 +1,6 @@
 {
   "name": "@cdmx/n8n-nodes-cron-parser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cron expression parser node for n8n workflows with timezone support and next run time calculation",
   "keywords": [
     "n8n-community-node-package",
@@ -43,7 +43,7 @@
     "dist"
   ],
   "n8n": {
-    "n8nNodesApiVersion": 2,
+    "n8nNodesApiVersion": 1,
     "credentials": [],
     "nodes": [
       "dist/nodes/CronParser/CronParser.node.js"
@@ -66,6 +66,6 @@
     "cron-parser": "^4.9.0"
   },
   "peerDependencies": {
-    "n8n-workflow": "^1.0.0"
+    "n8n-workflow": "*"
   }
 }
